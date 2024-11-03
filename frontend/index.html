@@ -19,46 +19,20 @@
             border-radius: 5px;
         }
         /* Styles for the message box */
-        .message-box {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            display: none; /* Initially hidden */
-        }
-        .message-box span {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .message-box button {
-            background-color: #4CAF50; /* Green */
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-        .message-box button:hover {
-            background-color: #45a049;
-        }
+        
     </style>
 </head>
 <body>
     <h1>Click on the map to get location name</h1>
-    <div id="map"></div>
+    <div id="mapcontainer">
+        <div id="map"></div>
+    </div>    
     <p id="locationName">Location name will appear here</p>
     
-    <!-- New element for displaying messages -->
-    <div id="messageBox" class="message-box">
-        <span id="messageDisplay"></span>
-        <button onclick="closeMessageBox()">Close</button>
-    </div>
-
+    <div id="messageBox" class="message-box"></div>  
+    
+    
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script type="module" src="./index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
